@@ -1,6 +1,10 @@
-jupyter==1.0.0
-numpy==1.24.2
+numpy
 pandas
-matplotlib
 scikit-learn
-seaborn
+psycopg2
+streamlit
+fastapi
+pydantic
+uvicorn
+streamlit_lottie
+joblib
