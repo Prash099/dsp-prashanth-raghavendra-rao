@@ -1,6 +1,6 @@
 jupyter==1.0.0
 numpy==1.24.2
 pandas
-matplotlib
 scikit-learn
-seaborn
+joblib
+flake8
