@@ -10,6 +10,7 @@ import joblib
 
 model = RandomForestRegressor(random_state=0)
 
+
 def build_model(train_df: pd.DataFrame) -> dict[str, str]:
     target = train_df[TARGET]
     train_df = train_df[FEATURE_COLUMNS]
@@ -27,8 +28,9 @@ def build_model(train_df: pd.DataFrame) -> dict[str, str]:
     joblib.dump(model, '../models/model.joblib')
     return {'rmse : ': score}
 
+
 def compute_rmsle(y_test: np.ndarray,
-                    y_pred: np.ndarray, 
-                    precision: int = 2) -> float:
+                  y_pred: np.ndarray,
+                  precision: int = 2) -> float:
     rmsle = np.sqrt(mean_squared_log_error(y_test, y_pred))
     return round(rmsle, precision)
